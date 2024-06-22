@@ -12,7 +12,7 @@ const App = () => {
 
     <BrowserRouter>
         <Routes>
-      {/* protected routes */}
+      {/* protected routesss */}
             <Route element={<LoginProvider>   <UserDataProvider> <ProtectedRoutes />   </UserDataProvider>     </LoginProvider>}>
                 <Route path="/" element={<Overview />}/>
                 <Route path="/jobs"  element={<Jobs/>} />
