@@ -1,0 +1,16 @@
+
+#root{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-color: #ffffff;
+     font-family: "Poppins";
+}
+:root{
+    --primary-color:#55758c;
+    --secondary-color:#e6a963;
+    --secondary-color-light:#ffffffd5;
+
+    --primary-color-shadow: 0px 0px 3px 1px #55758c5b;
+}

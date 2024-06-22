@@ -1,0 +1,200 @@
+.userinfo {
+    box-sizing: border-box;
+    margin: 2rem;
+    margin-left: 20.5rem;
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    padding: 4rem;
+    border-radius: 1.5rem;
+    flex-direction: column;
+    gap: 5rem;
+    color: var(--primary-color);
+  
+    .overview-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+  
+      h1 {
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+    }
+  
+    .foe-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+  
+      .foe-card {
+        justify-content: space-between;
+        padding: 1rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 220px;
+        border-radius: 1em;
+        box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        gap: 1.3rem;
+  
+        .logo-container {
+          align-items: center;
+  
+          figure {
+            margin-right: auto;
+            width: 50px;
+            height: 30px;
+            background-position: center;
+            background-image: url("/images/icons/logo.png");
+          }
+  
+          .close-icon,
+          .edit-icon {
+            width: 20px;
+            height: 20px;
+            background-image: url("/images/icons/file-edit.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            filter: invert(75%) sepia(19%) saturate(3327%) hue-rotate(337deg) brightness(102%) contrast(98%);
+            cursor: pointer;
+            transition: all 0.15s;
+  
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+  
+          .close-icon {
+            background-image: url("/images/icons/cross.png");
+          }
+        }
+  
+        #foe-form {
+          position: relative;
+          height: 70px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+  
+          h2 {
+            height: max-content;
+            font-size: 1.3rem;
+          }
+  
+          h3 {
+            font-size: 0.9rem;
+          }
+        }
+  
+        input {
+          all: unset;
+          display: block;
+          width: auto;
+          box-sizing: content-box;
+          font-size: 1.3rem;
+          line-height: 1.2;
+          height: fit-content;
+          font-family: inherit;
+          padding: 0;
+          margin: 0;
+          border: none;
+          margin-top: -0.1rem;
+          color: var(--primary-color) !important;
+          &::placeholder{
+            color: rgba(0, 0, 0, 0.3);
+          }
+        }
+  
+        input[type="number"] {
+          font-size: 0.9rem;
+          transform: translateY(2px);
+        }
+  
+       .check-icon {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          background-color: var(--secondary-color);
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          cursor: pointer;
+          transition: all 0.15s;
+          border: 1px solid transparent;
+          padding: 0.7rem;
+          box-sizing: border-box;
+  
+          &::before {
+            content: "";
+            inset: 0;
+            position: absolute;
+            margin: auto;
+            width: 70%;
+            height: 70%;
+            background-image: url("/images/icons/check.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 4;
+            filter: brightness(100%) contrast(100%) invert(100%);
+            transition: all 0.15s;
+            
+          }
+  
+          &:hover {
+            background-color: transparent;
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
+            &::before{
+              filter: invert(75%) sepia(19%) saturate(3327%) hue-rotate(337deg) brightness(102%) contrast(98%);
+            }
+          }
+        }
+        .card-err{
+     
+          color: red !important;
+        }
+      }
+    }
+  
+    .loader-skeleton {
+      position: relative;
+      width: 100%;
+      height: 10px;
+      margin: 0 auto;
+      border-radius: 2em;
+      box-shadow: inset 0 0 10px hsla(0, 0%, 0%, 0.25);
+  
+      span {
+        position: absolute;
+        border-radius: 2em;
+        background-color: var(--secondary-color);
+        opacity: 0.8;
+        height: 10px;
+      }
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .userinfo {
+      margin-left: 0rem;
+      padding: 7rem 5rem;
+    }
+  }
+  
+
+
+  @keyframes shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+   }
