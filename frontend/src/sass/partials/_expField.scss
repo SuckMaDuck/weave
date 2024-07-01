@@ -1,0 +1,134 @@
+
+.exp-header{
+    display:flex;
+    justify-content: center;
+    gap: 2rem;
+    label{
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 500;
+        width: 45%;
+        text-align: center;
+        background-color: var(--secondary-color);
+        padding: 0.75rem;
+        border-radius: 0.1em;
+    }
+}
+
+.exp{
+
+    gap: 2.5rem !important; 
+    justify-content: flex-start !important;
+}
+
+.exp-field{
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 2rem;
+
+        input{
+            all: unset;
+            // text-align: center !important;
+            width: 45%;
+
+            color: var(--primary-color);
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid #aaaaaa;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+            transition: box-shadow 0.2s ease, background 0.2s ease;
+            height: 20px;
+          
+            background-color: transparent;
+            font-family: "Poppins";
+        }
+
+        select{
+            all: unset;
+            width: 45%;
+            color: var(--primary-color);
+            padding: 10px !important; 
+            font-size: 17px;
+            border: 1px solid #aaaaaa;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+            transition: box-shadow 0.2s ease, background 0.2s ease;
+            height: 20px;
+            
+            background-color: transparent;
+            font-family: "Poppins";
+            text-wrap: nowrap;
+        }
+    
+}
+
+.exp-field-controller{
+    position: relative;
+ 
+}
+.exp-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 105%;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: 1px solid transparent;
+    &:hover{
+        background-color: transparent;
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color) ;
+    }
+
+   }
+
+.hide-exp{
+    // opacity: 0.6 !important;
+    // &:hover{
+    //     background-color: var(--secondary-color);
+    //     border: 1px solid transparent;
+    //     color: white;
+    // }
+    visibility: hidden;
+}
+
+.exp-add{
+    width: 35px;
+    height: 35px;
+   
+}
+
+
+
+
+@media(max-width: 500px){
+    
+.exp-header{
+
+
+    gap: 2rem;
+    label{
+
+        font-size: 0.9rem !important;
+
+
+    }
+}
+
+.exp-btn{
+    width: 25px;
+    height: 25px;
+
+}
+
+}
